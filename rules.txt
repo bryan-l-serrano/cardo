@@ -1,0 +1,76 @@
+Cuttle 
+======
+
+The exact origin of this unusual two-player game is unknown. It is described in Richard Sipie's [Cuttle FAQ](http://www.geocities.ws/richardsipie/cuttle.htm).
+
+He says he was taught the rules [in 1975](#this-game-has-similarities-with-magic-the-gathering).
+
+Rules taken and cleaned from: http://www.pagat.com/combat/cuttle.html
+
+
+Object 
+------
+
+Cuttle is a game for 2 players, played with a simple 52-card pack.
+
+The aim is to be the first build a layout worth at least 21 points. Cards can be used for their point value, or to attack your opponent's layout by destroying or capturing cards.
+
+
+Beginning the Round
+-------------------
+
+Play begins with the dealer, who deals six cards to himself and five to his opponent. This opponent then takes the first turn.
+
+On a turn, a player may play a card (see [card rules](#what-do-the-cards-do)), or draw one. If a player has **25 or more** points worth of "point cards" on the table at the end of his turn, that player is victorious - otherwise the turn passes to his opponent.
+
+What do the cards do?
+---------------------
+
+1. Firstly: Any numbered card (A-10) may be played as a **point card**. In this case, the player puts the card face-up on the table in front of him, and it is worth as many points as the are spots on its face (1 for an ace, etc).
+
+2. Secondly: Any numbered card (A-10) may be played, instead, as a **scuttle**. In this case, it is played **on top** of a point card which it exceeds [in value](#card-values).:small_orange_diamond: Both cards are then moved directly to the scrap pile (**face up**, as is everything there).:small_blue_diamond:
+
+:small_orange_diamond: _The eight of hearts will scuttle the seven of spades, but not the eight of clubs._
+
+:small_blue_diamond: _Cards in the scrap pile have no controller, and do not effect the game in any way._
+
+_A helpful way to remember suit order is that they are alphabetical:_ **C-D-H-S**
+
+
+### Point Cards
+
+The numbered cards may all be played as a one-off, **except for the eights and tens.** In this case, they are placed directly into the scrap pile, with the following effects:
+
+Card  | Ability
+----  | -------
+Ace   | Put all point cards on the table into the scrap pile.
+Two   | Place any card on the table into the scrap pile, except a point card. (In practice, Kings, Queens, Jacks and the "glasses" eight) or Place any one-off just played into the scrap pile. This occurs before the effect of that card is accomplished, and, uniquely, can be played during the opponents turn, as well as your own.
+Three | Rummage through the scrap pile, taking a card of your choice into your hand.
+Four  | Opponent must discard two cards of his choice from his hand and you take one of those of your choice
+Five  | You may draw three cards.
+Six   | All cards on the table except for point cards are moved into the scrap pile.
+Seven | Draw two cards. You can and must play this drawn card's ability immediately 
+	-10's ive your oppenent 1 card
+	7's add two more cards to draw and play immediately
+	if queen is drawn while the player has a queen, draw 3 cards
+Eight | 8 points and [these abilities](#eight-eyeglasses).
+Nine  | steal a royal from the opponent. must steal queen first if opponent has a queen in play
+Ten | 10 points, opponent draws a card
+
+### Eight :eyeglasses:
+
+As well as a point card, an eight too has a secondary use, although it is not a one-off. Instead, the card may be placed rather like a King or Queen, but at right angles to the opponent (and his other cards). This differentiates it from point card eights, and simultaneously makes it look like a pair of glasses! The effect is that the opponent must play with his hand exposed until he finds a way to transfer the eight to the scrap pile.
+
+### Royalty :crown:
+
+Can only be played on your turn, and count as no points.
+
+Card  | Ability
+----  | -------
+Jack  | Placed on top of a point card (A-10) already on the table. Kept there, the card is moved across the table and is now owned by the opponent of its original owner (who is generally your opponent!)
+Queen | Played on the table, like a point card. With a Queen in play, none of your other cards may be the target of opposing cards that target a single card. (Specifically: **Jacks, twos, and nines**). However, this offers no protection against those like aces that target more widely, even if there is only one card the table that will be affected. Nor do Queens offer any protection against scuttle attacks.
+	* a queen becomes a draw three card if you already have a queen in play
+King  | Played like Queens. With a King in play, a player can win with just 20 points worth of point cards on the table. With two Kings he needs just 16, with three, 13, and with all four 11 points! 
+
+
+
