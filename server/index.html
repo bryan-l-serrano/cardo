@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RPS</title>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td id="1"><div onclick="whenClicked(1)">1</div></td>
+                <td id="2"><div onclick="whenClicked(2)">2</div></td>
+                <td id="3"><div onclick="whenClicked(3)">3</div></td>
+                <td id="4"><div onclick="whenClicked(4)">4</div></td>
+                <td id="5"><div onclick="whenClicked(5)">5</div></td>
+            </tr>
+    </table>
+        <h1 id="text"></h1>
+    </body>
+    <script src = "/socket.io/socket.io.js"></script>
+    <script>
+    var socket = io();
+    
+    function whenClicked(i){
+        socket.emit('message', i);
+    }
+
+    socket.on('value', function(val) {
+        var item = document.getElementById("text");
+        item.innerHTML = "The last number pressed was: " + val;
+    });
+    </script>
+
+
+</html>
