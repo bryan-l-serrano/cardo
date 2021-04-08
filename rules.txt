@@ -13,13 +13,13 @@ Object
 
 Cuttle is a game for 2 players, played with a simple 52-card pack.
 
-The aim is to be the first build a layout worth at least 21 points. Cards can be used for their point value, or to attack your opponent's layout by destroying or capturing cards.
+The aim is to be the first build a layout worth at least 25 points. Cards can be used for their point value, or to attack your opponent's layout by destroying or capturing cards.
 
 
 Beginning the Round
 -------------------
 
-Play begins with the dealer, who deals six cards to himself and five to his opponent. This opponent then takes the first turn.
+Play begins with the dealer, who deals 3 cards to himself and 2 to his opponent. This opponent then takes the first turn.
 
 On a turn, a player may play a card (see [card rules](#what-do-the-cards-do)), or draw one. If a player has **25 or more** points worth of "point cards" on the table at the end of his turn, that player is victorious - otherwise the turn passes to his opponent.
 
