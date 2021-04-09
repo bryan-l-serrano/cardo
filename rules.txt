@@ -1,4 +1,4 @@
-Cuttle 
+cardo!
 ======
 
 The exact origin of this unusual two-player game is unknown. It is described in Richard Sipie's [Cuttle FAQ](http://www.geocities.ws/richardsipie/cuttle.htm).
