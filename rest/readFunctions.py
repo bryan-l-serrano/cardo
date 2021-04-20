@@ -4,35 +4,40 @@ import string
 import os
 
 
-def getPlayerByID(playerData):
-    data = (playerData.id)
+def getPlayerByID(idval):
     home = os.path.expanduser('~')
     conn = sqlite3.connect(home + '/cardo/cardo.db')
+    conn.row_factory = sqlite3.Row
     cursor = conn.cursor()
-
-    sqlCommand = """SELECT * FROM PLAYER WHERE id = (?)"""
-
-    returnData = cursor.execute(sqlCommand, data)
-
+    cursor.execute("SELECT * FROM PLAYER WHERE id = ?", (idval,))
+    returnData = [dict(row) for row in cursor.fetchall()]
     conn.commit()
-
     conn.close()
+    return returnData
 
+def getAllPlayers():
+    home = os.path.expanduser('~')
+    conn = sqlite3.connect(home + '/cardo/cardo.db')
+    conn.row_factory = sqlite3.Row
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM PLAYER")
+    returnData = [dict(row) for row in cursor.fetchall()]
+    conn.commit()
+    conn.close() 
+    print(returnData)
     return returnData
 
 
 def getPlayerByUserName(playerData):
-    data = (playerData.userName)
     home = os.path.expanduser('~')
     conn = sqlite3.connect(home + '/cardo/cardo.db')
+    conn.row_factory = sqlite3.Row
     cursor = conn.cursor()
 
-    sqlCommand = """SELECT * FROM PLAYER WHERE userName = (?)"""
-
-    returnData = cursor.execute(sqlCommand, data)
-
+    cursor.execute('SELECT * FROM PLAYER WHERE userName = ?', (playerData,))
+    returnData = [dict(row) for row in cursor.fetchall()]
     conn.commit()
 
     conn.close()
-
+    
     return returnData
