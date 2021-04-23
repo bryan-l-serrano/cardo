@@ -24,7 +24,6 @@ def getAllPlayers():
     returnData = [dict(row) for row in cursor.fetchall()]
     conn.commit()
     conn.close() 
-    print(returnData)
     return returnData
 
 
