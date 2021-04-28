@@ -11,12 +11,12 @@ cursor = conn.cursor()
 
 cursor.execute("DROP TABLE IF EXISTS PLAYER")
 
-sqlCommand = '''CREATE TABLE PLAYERS(
-id CHAR(20) PRIMARY KEY NOTNULL,
-userName CHAR(20) INIQUE NOTNULL,
-password CHAR(255) NOTNULL,
-gamesPlayed INT NOTNULL,
-gamesWon INT NOTNULL,
+sqlCommand = '''CREATE TABLE PLAYER(
+id CHAR(20) PRIMARY KEY NOT NULL,
+userName CHAR(20) UNIQUE NOT NULL,
+password CHAR(255) NOT NULL,
+gamesPlayed INT NOT NULL,
+gamesWon INT NOT NULL,
 email CHAR(50)
 )'''
 
