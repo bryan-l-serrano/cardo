@@ -4,61 +4,30 @@ using UnityEngine;
 
 public class GameState {
 	
-	public List<Card> drawPile = new List<Card>();
+	public Deck drawPile = new Deck();
 
-	public List<Card> oponentHand = new List<Card>();
-	public List<Card> playerHand = new List<Card>();
+	public Deck oponentHand = new Deck();
+	public Deck playerHand = new Deck();
 
-	public List<Card> playerTable = new List<Card>();
-	public List<Card> openentTable = new List<Card>();
+	public Deck playerTable = new Deck();
+	public Deck openentTable = new Deck();
 
-	public List<Card> discardPile = new List<Card>();
+	public Deck discardPile = new Deck();
 
 	public GameState() {
-		drawPile = InitialDrawDeck();
-	}
-
-	public List<Card> InitialDrawDeck() {
-		// Adds the basic cards to the deck
-		List<Card> cardArray = new List<Card>();
-		for (int i = 0; i < 52; i++)
-		{
-			Card card = new Card(i);
-
-			cardArray.Add(card);
-		}
-
-		return shuffleArray(cardArray);	
-	}
-
-	public List<Card> shuffleArray(List<Card> array) {
-		System.Random random = new System.Random();
-		for (int i = array.Count-1; i > 0; i--)
-		{
-			int randomIndex = random.Next(0, i);
-			Card temp = array[i];
-			array[i] = array[randomIndex];
-			array[randomIndex] = temp;
-		}
-		return array;
+		drawPile.initialDrawDeck();
 	}
 
 	public void drawCard(bool isPlayer) {
-		Card topCard = drawPile[drawPile.Count-1];
-		drawPile.Remove(topCard);
 		if(isPlayer){
-			playerHand.Add(topCard);
+			playerHand.addCard(drawPile.removeTopCard());
 		} else {
-			oponentHand.Add(topCard);
+			oponentHand.addCard(drawPile.removeTopCard());
 		}
 	}
 
-	public void playCard(Card card, bool isPlayer) {
-		if(isPlayer) {
-			card.triggerAbility();
-			playerTable.Add(card);
-			playerHand.Remove(card);
-		}
+	public void transferCardFromDecks(Deck fromDeck, Deck toDeck, Card card) {
+		toDeck.addCard(fromDeck.removeCard(card));
 	}
 
 }
