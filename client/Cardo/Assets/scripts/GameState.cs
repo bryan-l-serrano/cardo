@@ -3,6 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameState {
+
+	// INSTANTIATES AS A SINGLETON
+	private static GameState instance = null;
+	public static GameState GetInstance
+	{
+		get
+		{
+			if (instance == null)
+				instance = new GameState();
+			return instance;
+		}
+	}
+	
+	private GameState()
+	{
+		drawPile.initialDrawDeck();
+	}
+    // ****************************************
 	
 	public Deck drawPile = new Deck();
 
@@ -14,12 +32,8 @@ public class GameState {
 
 	public Deck discardPile = new Deck();
 
-	public GameState() {
-		drawPile.initialDrawDeck();
-	}
-
-	public void drawCard(bool isPlayer) {
-		if(isPlayer){
+	public void drawCard(PlayerType player) {
+		if(player == PlayerType.PLAYER){
 			playerHand.addCard(drawPile.removeTopCard());
 		} else {
 			oponentHand.addCard(drawPile.removeTopCard());

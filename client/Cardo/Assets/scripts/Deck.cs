@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class Deck {
 
-    private List<Card> deck;
+    public List<Card> deck;
 
     public Deck() {
         deck = new List<Card>();

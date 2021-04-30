@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class Card {
+public class Card : MonoBehaviour {
 
 	public int cardNumber;
 	public string cardName;
 
-	CardAbilities cardAbilities;
+	//public CardAbilitiesFlow cardAbilities;
 
 	public Card(int cardNumber) {
 		this.cardNumber = cardNumber;
@@ -19,8 +19,8 @@ public class Card {
 	}
 
 	public void triggerAbility(){
-		cardAbilities = new CardAbilities();
-		cardAbilities.triggerAbility(this.cardNumber);
+		//cardAbilities = new CardAbilities();
+		//cardAbilities.triggerAbility(this.cardNumber);
     }
 
 	public string ToString() {

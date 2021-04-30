@@ -10,7 +10,7 @@ public class DebugGUI : MonoBehaviour {
 
     void Start() {
         stateText = GetComponent<UnityEngine.UI.Text>();
-        gameState = new GameState();
+        gameState = GameState.GetInstance;
 
     }
 
@@ -20,7 +20,7 @@ public class DebugGUI : MonoBehaviour {
     void OnGUI() {
 
         if( GUI.Button(new Rect(10, 10, 100, 50), "Draw a card")) {
-            gameState.drawCard(true);
+            gameState.drawCard(PlayerType.PLAYER);
             stateText.text = "";
             foreach (Card item in gameState.playerHand.getDeck())
             {
