@@ -4,8 +4,7 @@ import string
 import os
 
 def updatePlayerPassword(playerId, newPassword):
-    home = os.path.expanduser('~')
-    conn = sqlite3.connect(home + '/cardo/cardo.db')
+    conn = sqlite3.connect('/cardo/cardo.db')
     conn.row_factory = sqlite3.Row
     cursor = conn.cursor()
     cursor.execute("UPDATE PLAYER SET password = ? WHERE id = ?", (newPassword,playerId,))
@@ -17,8 +16,7 @@ def updatePlayerPassword(playerId, newPassword):
 
 
 def updatePlayerGames(playerId, playerWon, gamesPlayed, gamesWon):
-    home = os.path.expanduser('~')
-    conn = sqlite3.connect(home + '/cardo/cardo.db')
+    conn = sqlite3.connect('/cardo/cardo.db')
     conn.row_factory = sqlite3.Row
     cursor = conn.cursor()
     if playerWon == True:  
@@ -33,8 +31,7 @@ def updatePlayerGames(playerId, playerWon, gamesPlayed, gamesWon):
 
 
 def updatePlayerEmail(playerId, newEmail):
-    home = os.path.expanduser('~')
-    conn = sqlite3.connect(home + '/cardo/cardo.db')
+    conn = sqlite3.connect('/cardo/cardo.db')
     conn.row_factory = sqlite3.Row
     cursor = conn.cursor()
     cursor.execute("UPDATE PLAYER SET email = ? WHERE id = ?", (newEmail,playerId,))

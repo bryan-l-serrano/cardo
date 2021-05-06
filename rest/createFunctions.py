@@ -10,9 +10,7 @@ def createID():
 def createPlayer(playerData):
     data = (createID(), playerData["userName"], playerData['password'], 0, 0, playerData['email'])
     print(data)
-    home = os.path.expanduser('~')
-    print(home)
-    conn = sqlite3.connect(home + '/cardo/cardo.db')
+    conn = sqlite3.connect('/cardo/cardo.db')
     print('connected to db')
     cursor = conn.cursor()
 
