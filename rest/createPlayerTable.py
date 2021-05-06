@@ -2,8 +2,7 @@
 import sqlite3
 import os
 
-home = os.path.expanduser('~')
-conn = sqlite3.connect(home + '/cardo/cardo.db')
+conn = sqlite3.connect('/cardo/cardo.db')
 
 print('opened database')
 
