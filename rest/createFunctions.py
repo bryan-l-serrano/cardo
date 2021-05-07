@@ -5,7 +5,7 @@ import string
 import os
 
 def createID():
-    return ''.join(random.choices(string.ascii_letters + string.digits, k=20))
+    return ''.join(random.sample(string.ascii_letters + string.digits, k=20))
 
 def createPlayer(playerData):
     data = (createID(), playerData["userName"], playerData['password'], 0, 0, playerData['email'])
