@@ -52,7 +52,10 @@ public class Deck : MonoBehaviour{
     }
 
     public void addCard(Card card) {
+        Debug.Log(card.ToString());
+        Debug.Log(this.getStringOfCards());
         this.deck.Add(card);
+        Debug.Log(this.getStringOfCards());
     }
 
     public string getStringOfCards(){

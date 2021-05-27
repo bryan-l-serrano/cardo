@@ -8,10 +8,14 @@ public class Card : MonoBehaviour {
 	public int cardNumber;
 	public string cardName;
 
+	public List<CardFlag> cardFlags;
+
 	//public CardAbilitiesFlow cardAbilities;
 
 	public Card(int cardNumber) {
 		this.cardNumber = cardNumber;
+		cardFlags = new List<CardFlag>();
+		cardFlags.Add(CardFlag.POINT);
 	}
 
 	public Card(string cardName) {
@@ -23,7 +27,8 @@ public class Card : MonoBehaviour {
 		//cardAbilities.triggerAbility(this.cardNumber);
     }
 
-	public string ToString() {
+	public override string ToString() {
 		return cardNumber.ToString();
 	}
+
 }

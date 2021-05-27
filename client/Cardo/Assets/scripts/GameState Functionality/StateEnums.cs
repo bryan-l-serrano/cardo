@@ -7,11 +7,12 @@ public enum ActionType {
     DRAW,
     DISCARD,
     SELECT,
-    BLOCK,
-    SHOW_CARDS,
+    //REPLACE THESE WITH SET FLAGS
+    // BLOCK,
+    // SHOW_CARDS,
     HIDE_CARDS,
-    COUNTER_INCREASE
-
+    COUNTER_INCREASE,
+    SET_FLAGS
 };
 
 public enum PlayerType{
@@ -19,10 +20,14 @@ public enum PlayerType{
     PLAYER2
 }
 
-public enum CardType {
+public enum CardFlag {
     ATTACK,
     DEFENSE,
-    EFFECT
+    EFFECT,
+    POINT,
+    SELECTABLE,
+    IN_HAND,
+    BLOCKED,
 }
 
 public enum SelectedCardAbility {

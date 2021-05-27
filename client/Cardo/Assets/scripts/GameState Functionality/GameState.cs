@@ -29,6 +29,7 @@ public class GameState {
 		discardPile = new Deck();
 
 		drawPile.initialDrawDeck();
+		Debug.Log("END INITIALIZING------------------------------------------");
 	}
     // ****************************************
 	
@@ -56,6 +57,7 @@ public class GameState {
 	//END STATE VARIABLES*********************
 
 	public void drawCard(PlayerType player) {
+		Debug.Log("DRAWING A CARD");
 		if(player == PlayerType.PLAYER1){
 			player1Hand.addCard(drawPile.removeTopCard());
 		} else {
