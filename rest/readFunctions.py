@@ -5,8 +5,7 @@ import os
 
 
 def getPlayerByID(idval):
-    home = os.path.expanduser('~')
-    conn = sqlite3.connect(home + '/cardo/cardo.db')
+    conn = sqlite3.connect('/cardo/cardo.db')
     conn.row_factory = sqlite3.Row
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM PLAYER WHERE id = ?", (idval,))
@@ -16,8 +15,7 @@ def getPlayerByID(idval):
     return returnData
 
 def getAllPlayers():
-    home = os.path.expanduser('~')
-    conn = sqlite3.connect(home + '/cardo/cardo.db')
+    conn = sqlite3.connect('/cardo/cardo.db')
     conn.row_factory = sqlite3.Row
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM PLAYER")
@@ -28,8 +26,7 @@ def getAllPlayers():
 
 
 def getPlayerByUserName(playerData):
-    home = os.path.expanduser('~')
-    conn = sqlite3.connect(home + '/cardo/cardo.db')
+    conn = sqlite3.connect('/cardo/cardo.db')
     conn.row_factory = sqlite3.Row
     cursor = conn.cursor()
 
