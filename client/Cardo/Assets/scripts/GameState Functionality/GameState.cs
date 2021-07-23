@@ -56,13 +56,17 @@ public class GameState {
 
 	//END STATE VARIABLES*********************
 
-	public void drawCard(PlayerType player) {
-		Debug.Log("DRAWING A CARD");
+	public Card drawCard(PlayerType player) {
+		Debug.Log("Card Drawn-------------------------------------");
+		Card drawnCard = drawPile.removeTopCard();
+		Debug.Log(drawnCard);
+		Debug.Log("-----------------------------------------------");
 		if(player == PlayerType.PLAYER1){
-			player1Hand.addCard(drawPile.removeTopCard());
+			player1Hand.addCard(drawnCard);
 		} else {
-			player2Hand.addCard(drawPile.removeTopCard());
+			player2Hand.addCard(drawnCard);
 		}
+		return drawnCard;
 	}
 
 	public void transferCardFromDecks(Deck fromDeck, Deck toDeck, Card card) {

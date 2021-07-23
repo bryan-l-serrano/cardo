@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: ApplicationVariables
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"declarations":{"collection":{"$content":[{"name":"FlowChartActions","value":{"$content":true,"$type":"System.Boolean"},"$version":"A"},{"name":"EXIT_ACTION","value":null,"$version":"A"},{"name":"SELECT","value":null,"$version":"A"},{"name":"CLICK_OBJECT","value":null,"$version":"A"}],"$version":"A"},"$version":"A"}}'
-    _objectReferences: []
+    _json: '{"declarations":{"collection":{"$content":[{"name":"FlowChartActions","value":{"$content":true,"$type":"System.Boolean"},"$version":"A"},{"name":"actionInProgress","value":{"$content":false,"$type":"System.Boolean"},"$version":"A"},{"name":"selectedObject","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"START_PLAYER_TURN","value":{"$content":"START_PLAYER_TURN","$type":"AuxilaryTriggers"},"$version":"A"},{"name":"END_PLAYER_TURN","value":{"$content":"END_PLAYER_TURN","$type":"AuxilaryTriggers"},"$version":"A"},{"name":"CLICK_OBJECT","value":{"$content":"CLICK_OBJECT","$type":"AuxilaryTriggers"},"$version":"A"},{"name":"EXIT_ACTION","value":{"$content":"EXIT_ACTION","$type":"AuxilaryTriggers"},"$version":"A"},{"name":"SELECT","value":{"$content":"SELECT","$type":"ActionType"},"$version":"A"},{"name":"DRAW","value":{"$content":"DRAW","$type":"ActionType"},"$version":"A"},{"name":"TRANSFER","value":{"$content":"TRANSFER","$type":"ActionType"},"$version":"A"},{"name":"COUNTER_UPDATE","value":{"$content":"COUNTER_CHANGE","$type":"ActionType"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+    _objectReferences:
+    - {fileID: 1063330150031921320, guid: 7d1455c0f4811514384863371d69272a, type: 3}
