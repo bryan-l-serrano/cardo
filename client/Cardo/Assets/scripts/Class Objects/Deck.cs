@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class Deck : MonoBehaviour{
+public class Deck {
 
     public List<Card> deck;
 
@@ -41,8 +41,9 @@ public class Deck : MonoBehaviour{
     }
 
     public Card removeTopCard(){
-        Card topCard = this.deck[deck.Count-1];
+        Card topCard = this.deck[0];
         this.deck.Remove(topCard);
+        Debug.Log("Number of Cards After Removal:" + this.deck.Count);
         return topCard;
     }
 
@@ -52,10 +53,7 @@ public class Deck : MonoBehaviour{
     }
 
     public void addCard(Card card) {
-        Debug.Log(card.ToString());
-        Debug.Log(this.getStringOfCards());
         this.deck.Add(card);
-        Debug.Log(this.getStringOfCards());
     }
 
     public string getStringOfCards(){
