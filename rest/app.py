@@ -48,7 +48,7 @@ def getPlayerByID(id):
     except:
         return Response(json.dumps({"STATUS": "ERROR", "message": "something went wrong with the request"}), 400, mimetype='application/json')
     else:
-        return Response(json.dumps({"STATUS":"SUCCESS", "playerData":playerData}), 200, mimetype='application/json')
+        return Response(json.dumps(playerData), 200, mimetype='application/json')
 
 
 
@@ -59,7 +59,7 @@ def getPlayerByUserName(username):
     except:
         return Response(json.dumps({"STATUS": "ERROR", "message": "something went wrong with the request"}), 400, mimetype='application/json')
     else:
-        return Response(json.dumps({"STATUS":"SUCCESS", "playerData":playerData}), 200, mimetype='application/json')
+        return Response(json.dumps(playerData[0]), 200, mimetype='application/json')
 
 ##############################################
 ###UPDATE
@@ -76,7 +76,7 @@ def updatePassword():
     except:
         return Response(json.dumps({"STATUS": "ERROR", "message": "something went wrong with the request"}), 400, mimetype='application/json')
     else:
-       return Response(json.dumps({"STATUS":"SUCCESS", "playerData":returnData}), 200, mimetype='application/json')
+       return Response(json.dumps(returnData), 200, mimetype='application/json')
 
 
 @app.route('/player/update/games', methods=['POST'])
@@ -94,7 +94,7 @@ def updateGames():
     except:
         return Response(json.dumps({"STATUS": "ERROR", "message": "something went wrong with the request"}), 400, mimetype='application/json')
     else:
-        return Response(json.dumps({"STATUS":"SUCCESS", "playerData":returnData}), 200, mimetype='application/json')
+        return Response(json.dumps(returnData), 200, mimetype='application/json')
 
 
 
@@ -110,7 +110,7 @@ def updateEmail():
     except:
         return Response(json.dumps({"STATUS": "ERROR", "message": "something went wrong with the request"}), 400, mimetype='application/json')
     else:
-       return Response(json.dumps({"STATUS":"SUCCESS", "playerData":returnData}), 200, mimetype='application/json')
+       return Response(json.dumps(returnData), 200, mimetype='application/json')
 
 
 ###################################################
